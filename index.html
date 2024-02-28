@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>API - Notícias | Bruno Mazeto</title>
+  </head>
+  <body>
+    <div class="container">
+      <a href="#" onclick="reloadPage()" class="link-title"
+        ><h1 id="news-title">Agregador de Notícias</h1></a
+      >
+
+      <div class="selectionContainer">
+        <label for="category">Escolher Categoria :</label>
+        <select id="category">
+          <option value="empty" selected disabled>Selecione</option>
+          <option value="business">Negócio</option>
+          <option value="entertainment">Entretenimento</option>
+          <option value="general">Geral</option>
+          <option value="health">Saúde</option>
+          <option value="science">Ciência</option>
+          <option value="sports">Esportes</option>
+          <option value="technology">Tecnologia</option>
+        </select>
+        <button id="fetchCategory">Buscar Notícias</button>
+      </div>
+
+      <div class="searchContainer">
+        <input
+          type="text"
+          id="searchKeyword"
+          placeholder="Procurar por notícias"
+        />
+        <button onclick="fetchNews(true)">Chave de pesquisa</button>
+      </div>
+      <div id="newsContainer"></div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
